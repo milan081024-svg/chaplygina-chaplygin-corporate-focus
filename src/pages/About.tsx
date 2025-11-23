@@ -1,10 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Award, Target, Users2 } from "lucide-react";
-
 const About = () => {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
 
       {/* Hero Section */}
@@ -30,10 +28,7 @@ const About = () => {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-foreground/80 leading-relaxed mb-4">
-                Chaplygina & Chaplygin – Corporate Consulting была основана командой опытных юристов, 
-                специализирующихся на корпоративном праве и юридическом сопровождении бизнеса. 
-                За годы работы мы накопили обширный опыт в решении самых сложных правовых вопросов 
-                для компаний различного масштаба.
+                Chaplygina & Chaplygin была основана командой опытных юристов, специализирующихся на корпоративном праве и юридическом сопровождении бизнеса. За годы работы мы накопили обширный опыт в решении самых сложных правовых вопросов для компаний различного масштаба.
               </p>
               <p className="text-foreground/80 leading-relaxed">
                 Наш подход основан на глубоком понимании бизнес-процессов клиента и предоставлении 
@@ -120,8 +115,6 @@ const About = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
