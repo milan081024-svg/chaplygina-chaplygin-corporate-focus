@@ -7,25 +7,25 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
 const Contacts = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    message: "",
+    message: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validate form
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Ошибка",
         description: "Пожалуйста, заполните все обязательные поля",
-        variant: "destructive",
+        variant: "destructive"
       });
       return;
     }
@@ -33,7 +33,7 @@ const Contacts = () => {
     // Here you would typically send the form data to your backend
     toast({
       title: "Спасибо за обращение!",
-      description: "Мы свяжемся с вами в ближайшее время",
+      description: "Мы свяжемся с вами в ближайшее время"
     });
 
     // Reset form
@@ -41,12 +41,10 @@ const Contacts = () => {
       name: "",
       email: "",
       phone: "",
-      message: "",
+      message: ""
     });
   };
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
 
       {/* Hero Section */}
@@ -86,10 +84,7 @@ const Contacts = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-primary mb-1">Email</h3>
-                    <a
-                      href="mailto:info@chaplygin-consulting.ru"
-                      className="text-foreground/70 hover:text-accent transition-colors"
-                    >
+                    <a href="mailto:info@chaplygin-consulting.ru" className="text-foreground/70 hover:text-accent transition-colors">
                       info@chaplygin-consulting.ru
                     </a>
                   </div>
@@ -101,10 +96,7 @@ const Contacts = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-primary mb-1">Телефон</h3>
-                    <a
-                      href="tel:+74951234567"
-                      className="text-foreground/70 hover:text-accent transition-colors"
-                    >
+                    <a href="tel:+74951234567" className="text-foreground/70 hover:text-accent transition-colors">
                       +7 (495) 123-45-67
                     </a>
                   </div>
@@ -117,7 +109,7 @@ const Contacts = () => {
                   <div>
                     <h3 className="font-semibold text-primary mb-1">Адрес</h3>
                     <p className="text-foreground/70">
-                      Москва, Россия
+                      Алматы, Казахстан   
                     </p>
                   </div>
                 </div>
@@ -141,49 +133,34 @@ const Contacts = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Имя *</Label>
-                  <Input
-                    id="name"
-                    type="text"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Ваше имя"
-                    required
-                  />
+                  <Input id="name" type="text" value={formData.name} onChange={e => setFormData({
+                  ...formData,
+                  name: e.target.value
+                })} placeholder="Ваше имя" required />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="email">Email *</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="your@email.com"
-                    required
-                  />
+                  <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
+                  ...formData,
+                  email: e.target.value
+                })} placeholder="your@email.com" required />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="phone">Телефон</Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="+7 (___) ___-__-__"
-                  />
+                  <Input id="phone" type="tel" value={formData.phone} onChange={e => setFormData({
+                  ...formData,
+                  phone: e.target.value
+                })} placeholder="+7 (___) ___-__-__" />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="message">Сообщение *</Label>
-                  <Textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Опишите ваш вопрос или ситуацию"
-                    rows={5}
-                    required
-                  />
+                  <Textarea id="message" value={formData.message} onChange={e => setFormData({
+                  ...formData,
+                  message: e.target.value
+                })} placeholder="Опишите ваш вопрос или ситуацию" rows={5} required />
                 </div>
 
                 <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
@@ -197,8 +174,6 @@ const Contacts = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Contacts;
