@@ -59,6 +59,63 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} />)}
           </div>
+          
+          {/* Additional Services */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <h3 className="text-2xl sm:text-3xl font-serif font-bold text-primary mb-6">
+              А также:
+            </h3>
+            <ul className="space-y-3 text-foreground/80">
+              <li className="flex items-start">
+                <span className="mr-3 text-accent">•</span>
+                <span>Сопровождение деятельности юридических лиц</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-accent">•</span>
+                <span>Регистрация/перерегистрация юридических лиц</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-accent">•</span>
+                <span>Открытие филиалов и представительств</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-accent">•</span>
+                <span>Ликвидация / закрытие</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-accent">•</span>
+                <span>Смена руководителя юридического лица</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-accent">•</span>
+                <span>Увеличение уставного капитала</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-accent">•</span>
+                <span>Постановка юридического лица нерезидента на учет в налоговых органах (для получения БИН)</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-accent">•</span>
+                <span>Разработка и внедрение внутренних норм предприятия, разработка договоров, соглашений, трудовых договоров и договоров о материальной ответственности, должностные инструкции</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-accent">•</span>
+                <span>Ведение переписки с государственными органами и учреждениями</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-accent">•</span>
+                <span>Представительство интересов клиентов в государственных органах</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-accent">•</span>
+                <span>Услуги в сфере недвижимости (оформление, переоформление), сопровождение сделок</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-accent">•</span>
+                <span>Услуги в инженерно-строительной сфере (тех.задания, обоснования, защита проектов)</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
