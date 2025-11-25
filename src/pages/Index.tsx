@@ -52,18 +52,16 @@ const Index = () => {
       <Header />
 
       {/* Hero Section */}
-      <section 
-        className="relative py-20 sm:py-32 bg-gradient-to-b from-background to-secondary/30"
-        style={{
-          backgroundImage: `url(${logoBackground})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'contain',
-          backgroundRepeat: 'no-repeat',
-          backgroundBlendMode: 'overlay',
-          opacity: 0.95,
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-background to-secondary/30" style={{ opacity: 0.85 }} />
+      <section className="relative py-20 sm:py-32 bg-gradient-to-b from-background to-secondary/30 overflow-hidden">
+        <div 
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `url(${logoBackground})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary mb-6 text-balance">
