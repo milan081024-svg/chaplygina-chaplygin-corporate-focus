@@ -52,7 +52,7 @@ const Index = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-20 sm:py-32 bg-gradient-to-b from-background to-secondary/30">
+      <section className="relative py-12 sm:py-16 bg-gradient-to-b from-background to-secondary/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <img 
