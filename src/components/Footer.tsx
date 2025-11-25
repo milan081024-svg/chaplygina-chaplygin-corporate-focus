@@ -53,7 +53,7 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <Mail className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
                 <a className="text-sm text-primary-foreground/70 hover:text-accent transition-colors" href="">
-                  msitrade@mail.ru
+                  info@chplgn.kz
                 </a>
               </li>
               <li className="flex items-start space-x-3">
