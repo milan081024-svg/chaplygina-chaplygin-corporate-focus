@@ -118,9 +118,9 @@ const Contacts = () => {
               <div className="pt-8 border-t border-border">
                 <h3 className="font-semibold text-primary mb-3">Время работы</h3>
                 <p className="text-foreground/70">
-                  Понедельник – Пятница: 9:00 – 18:00
+                  Понедельник – Суббота: 9:00 – 18:00
                   <br />
-                  Суббота – Воскресенье: выходной
+                   Воскресенье: выходной
                 </p>
               </div>
             </div>
