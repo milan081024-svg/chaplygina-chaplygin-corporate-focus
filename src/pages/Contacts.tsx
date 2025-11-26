@@ -30,10 +30,30 @@ const Contacts = () => {
       return;
     }
 
-    // Here you would typically send the form data to your backend
+    // Format message for WhatsApp
+    const message = `
+*Новая заявка с сайта*
+
+*Имя:* ${formData.name}
+*Email:* ${formData.email}
+*Телефон:* ${formData.phone || 'Не указан'}
+
+*Сообщение:*
+${formData.message}
+    `.trim();
+
+    // WhatsApp number (remove all non-numeric characters except +)
+    const whatsappNumber = '77014580180'; // +7 (701) 458-01-80
+    
+    // Create WhatsApp URL with pre-filled message
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+
     toast({
-      title: "Спасибо за обращение!",
-      description: "Мы свяжемся с вами в ближайшее время"
+      title: "Перенаправление в WhatsApp",
+      description: "Нажмите 'Отправить' в WhatsApp для завершения"
     });
 
     // Reset form
