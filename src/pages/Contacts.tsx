@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 const Contacts = () => {
   const {
     toast
@@ -17,7 +18,7 @@ const Contacts = () => {
     phone: "",
     message: ""
   });
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Validate form
@@ -30,39 +31,32 @@ const Contacts = () => {
       return;
     }
 
-    // Format message for WhatsApp
-    const message = `
-*Новая заявка с сайта*
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
+      });
 
-*Имя:* ${formData.name}
-*Email:* ${formData.email}
-*Телефон:* ${formData.phone || 'Не указан'}
+      if (error) throw error;
 
-*Сообщение:*
-${formData.message}
-    `.trim();
+      toast({
+        title: "Спасибо за обращение!",
+        description: "Мы свяжемся с вами в ближайшее время"
+      });
 
-    // WhatsApp number (remove all non-numeric characters except +)
-    const whatsappNumber = '77014580180'; // +7 (701) 458-01-80
-    
-    // Create WhatsApp URL with pre-filled message
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-    
-    // Open WhatsApp
-    window.open(whatsappUrl, '_blank');
-
-    toast({
-      title: "Перенаправление в WhatsApp",
-      description: "Нажмите 'Отправить' в WhatsApp для завершения"
-    });
-
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: ""
-    });
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
+      });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Ошибка",
+        description: "Не удалось отправить сообщение. Попробуйте позже.",
+        variant: "destructive"
+      });
+    }
   };
   return <div className="min-h-screen flex flex-col">
       <Header />
