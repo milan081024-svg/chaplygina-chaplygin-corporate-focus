@@ -29,7 +29,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send email to company
     const emailResponse = await resend.emails.send({
       from: "Заявка с сайта <onboarding@resend.dev>",
-      to: ["info@lawfirm.kz"], // Replace with your actual email
+      to: ["info@chplgn.kz"],
       subject: `Новая заявка от ${name}`,
       html: `
         <h2>Новая заявка с сайта</h2>
