@@ -14,9 +14,7 @@ const Footer = () => {
                 Corporate Consulting
               </span>
             </div>
-            <p className="text-sm text-primary-foreground/70">
-              Профессиональный корпоративный юридический консалтинг для вашего бизнеса
-            </p>
+            <p className="text-sm text-primary-foreground/70">Профессиональный корпоративный юридический консалтинг для вашего бизнеса.</p>
           </div>
 
           {/* Navigation */}
