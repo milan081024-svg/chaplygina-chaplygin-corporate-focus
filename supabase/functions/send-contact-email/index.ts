@@ -28,7 +28,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email to company
     const emailResponse = await resend.emails.send({
-      from: "Заявка с сайта <onboarding@resend.dev>",
+      from: "Заявка с сайта <noreply@chplgn.kz>",
       to: ["info@chplgn.kz"],
       subject: `Новая заявка от ${name}`,
       html: `
