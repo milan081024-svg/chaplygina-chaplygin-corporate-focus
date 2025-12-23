@@ -30,19 +30,18 @@ const Contacts = () => {
       });
       return;
     }
-
     try {
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+      const {
+        data,
+        error
+      } = await supabase.functions.invoke('send-contact-email', {
         body: formData
       });
-
       if (error) throw error;
-
       toast({
         title: "Спасибо за обращение!",
         description: "Мы свяжемся с вами в ближайшее время"
       });
-
       setFormData({
         name: "",
         email: "",
@@ -123,7 +122,7 @@ const Contacts = () => {
                   <div>
                     <h3 className="font-semibold text-primary mb-1">Адрес</h3>
                     <p className="text-foreground/70">
-                      Алматы, Казахстан   
+                      Актобе, Казахстан   
                     </p>
                   </div>
                 </div>
