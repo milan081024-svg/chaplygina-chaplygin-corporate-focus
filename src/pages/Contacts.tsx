@@ -97,9 +97,15 @@ const Contacts = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-primary mb-1">Email</h3>
-                    <a className="text-foreground/70 hover:text-accent transition-colors" href="">
+                    <button
+                      className="text-foreground/70 hover:text-accent transition-colors cursor-pointer"
+                      onClick={() => {
+                        navigator.clipboard.writeText("info@chplgn.kz");
+                        toast({ title: "Скопировано", description: "Email скопирован в буфер обмена" });
+                      }}
+                    >
                       info@chplgn.kz
-                    </a>
+                    </button>
                   </div>
                 </div>
 
