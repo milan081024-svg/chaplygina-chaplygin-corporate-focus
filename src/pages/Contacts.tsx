@@ -127,9 +127,14 @@ const Contacts = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-primary mb-1">Адрес</h3>
-                    <p className="text-foreground/70">
-                      ​г. Актобе, ул. Маресьева 89        
-                    </p>
+                    <a
+                      className="text-foreground/70 hover:text-accent transition-colors"
+                      href="https://2gis.kz/aktobe/search/%D1%83%D0%BB.%20%D0%9C%D0%B0%D1%80%D0%B5%D1%81%D1%8C%D0%B5%D0%B2%D0%B0%2089"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      г. Актобе, ул. Маресьева 89
+                    </a>
                   </div>
                 </div>
               </div>
