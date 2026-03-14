@@ -122,7 +122,7 @@ const Contacts = () => {
                   <div>
                     <h3 className="font-semibold text-primary mb-1">Адрес</h3>
                     <p className="text-foreground/70">
-                      Актобе, Казахстан   
+                      ​г. Актобе, ул. Маресьева 89        
                     </p>
                   </div>
                 </div>
@@ -146,7 +146,7 @@ const Contacts = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Имя *</Label>
-                  <Input id="name" type="text" value={formData.name} onChange={e => setFormData({
+                  <Input id="name" type="text" value={formData.name} onChange={(e) => setFormData({
                   ...formData,
                   name: e.target.value
                 })} placeholder="Ваше имя" required />
@@ -154,7 +154,7 @@ const Contacts = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="email">Email *</Label>
-                  <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
+                  <Input id="email" type="email" value={formData.email} onChange={(e) => setFormData({
                   ...formData,
                   email: e.target.value
                 })} placeholder="your@email.com" required />
@@ -162,7 +162,7 @@ const Contacts = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="phone">Телефон</Label>
-                  <Input id="phone" type="tel" value={formData.phone} onChange={e => setFormData({
+                  <Input id="phone" type="tel" value={formData.phone} onChange={(e) => setFormData({
                   ...formData,
                   phone: e.target.value
                 })} placeholder="+7 (___) ___-__-__" />
@@ -170,7 +170,7 @@ const Contacts = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="message">Сообщение *</Label>
-                  <Textarea id="message" value={formData.message} onChange={e => setFormData({
+                  <Textarea id="message" value={formData.message} onChange={(e) => setFormData({
                   ...formData,
                   message: e.target.value
                 })} placeholder="Опишите ваш вопрос или ситуацию" rows={5} required />
