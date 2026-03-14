@@ -50,7 +50,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <Mail className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
-                <a className="text-sm text-primary-foreground/70 hover:text-accent transition-colors" href="">
+                <a className="text-sm text-primary-foreground/70 hover:text-accent transition-colors" href="mailto:info@chplgn.kz">
                   info@chplgn.kz
                 </a>
               </li>
@@ -62,9 +62,9 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-primary-foreground/70">
-                  ​г. Актобе, ул. Маресьева 89 
-                </span>
+                <a className="text-sm text-primary-foreground/70 hover:text-accent transition-colors" href="https://2gis.kz/aktobe/search/%D1%83%D0%BB.%20%D0%9C%D0%B0%D1%80%D0%B5%D1%81%D1%8C%D0%B5%D0%B2%D0%B0%2089" target="_blank" rel="noopener noreferrer">
+                  г. Актобе, ул. Маресьева 89
+                </a>
               </li>
             </ul>
           </div>
