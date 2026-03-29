@@ -58,7 +58,7 @@ const Index = () => {
             <img 
               src={logo} 
               alt="Chaplygina & Chaplygin Corporate Consulting" 
-              className="w-48 sm:w-56 lg:w-64 mx-auto mb-8 mix-blend-multiply"
+              className="w-48 sm:w-56 lg:w-64 mx-auto mb-8 opacity-100"
             />
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary mb-6 text-balance">
               Корпоративный юридический консалтинг для бизнеса
