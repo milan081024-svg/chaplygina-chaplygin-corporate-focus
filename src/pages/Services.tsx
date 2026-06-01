@@ -144,6 +144,7 @@ const Services = () => {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>;

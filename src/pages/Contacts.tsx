@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -58,7 +59,13 @@ const Contacts = () => {
     }
   };
   return <div className="min-h-screen flex flex-col">
+      <SEO
+        title="Контакты – Chaplygina & Chaplygin"
+        description="Свяжитесь с юридической фирмой в Актобе: info@chplgn.kz, +7 (701) 458-01-80, ул. Маресьева 89. Форма обратной связи."
+        path="/contacts"
+      />
       <Header />
+      <main className="flex-1">
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-b from-background to-secondary/30">
