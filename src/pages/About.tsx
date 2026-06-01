@@ -1,9 +1,16 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Award, Target, Users2 } from "lucide-react";
 const About = () => {
   return <div className="min-h-screen flex flex-col">
+      <SEO
+        title="О нас – Chaplygina & Chaplygin"
+        description="Команда юристов с более 10 лет опыта в корпоративном праве. Наши ценности: профессионализм, результат и доверие клиентов."
+        path="/about"
+      />
       <Header />
+      <main className="flex-1">
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-b from-background to-secondary/30">
@@ -113,6 +120,7 @@ const About = () => {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>;

@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
+import SEO from "@/components/SEO";
 import { Building2, FileText, Shield, Scale, Users, Briefcase, ClipboardCheck, TrendingUp } from "lucide-react";
 const Services = () => {
   const services = [{
@@ -37,7 +38,13 @@ const Services = () => {
     description: "Разработка и внедрение систем корпоративного управления, подготовка внутренних регламентов и политик, организация работы органов управления, консультации по корпоративным процедурам."
   }];
   return <div className="min-h-screen flex flex-col">
+      <SEO
+        title="Юридические услуги – Chaplygina & Chaplygin"
+        description="Полный спектр услуг для бизнеса: регистрация компаний, договорная работа, M&A, корпоративные споры, правовой аудит и сопровождение."
+        path="/services"
+      />
       <Header />
+      <main className="flex-1">
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-b from-background to-secondary/30">
@@ -56,15 +63,18 @@ const Services = () => {
       {/* Services Grid */}
       <section className="py-16 sm:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-primary mb-12 text-center">
+            Наши ключевые компетенции
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} />)}
           </div>
           
           {/* Additional Services */}
           <div className="mt-16 max-w-4xl mx-auto">
-            <h3 className="text-2xl sm:text-3xl font-serif font-bold text-primary mb-6">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-primary mb-6">
               А также:
-            </h3>
+            </h2>
             <ul className="space-y-3 text-foreground/80">
               <li className="flex items-start">
                 <span className="mr-3 text-accent">•</span>
@@ -134,6 +144,7 @@ const Services = () => {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>;

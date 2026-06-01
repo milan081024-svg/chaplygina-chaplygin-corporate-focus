@@ -4,7 +4,34 @@ import { ArrowRight, CheckCircle2, Building2, FileText, Shield, Scale, Users, Br
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
+import SEO from "@/components/SEO";
 import logo from "@/assets/logo.jpg";
+
+const legalServiceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  name: "Chaplygina & Chaplygin",
+  description: "Корпоративный юридический консалтинг для бизнеса",
+  url: "https://chplgn.lovable.app",
+  telephone: "+7-701-458-01-80",
+  email: "info@chplgn.kz",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "ул. Маресьева 89",
+    addressLocality: "Актобе",
+    addressCountry: "KZ",
+  },
+  openingHours: "Mo-Sa 09:00-18:00",
+  areaServed: "KZ",
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Chaplygina & Chaplygin",
+  url: "https://chplgn.lovable.app",
+  logo: "https://chplgn.lovable.app/favicon.ico",
+};
 
 const Index = () => {
   const services = [
@@ -49,7 +76,14 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO
+        title="Chaplygina & Chaplygin – Корпоративный консалтинг"
+        description="Корпоративный юридический консалтинг в Казахстане: договорная работа, M&A, корпоративные споры и правовое сопровождение бизнеса."
+        path="/"
+        jsonLd={[legalServiceJsonLd, organizationJsonLd]}
+      />
       <Header />
+      <main className="flex-1">
 
       {/* Hero Section */}
       <section className="relative py-12 sm:py-16 bg-gradient-to-b from-background to-secondary/30">
@@ -157,6 +191,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>
