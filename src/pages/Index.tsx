@@ -83,8 +83,7 @@ const Index = () => {
         jsonLd={[legalServiceJsonLd, organizationJsonLd]}
       />
       <Header />
-      <main className="flex-1">{/* main content start */}</main>
-      <main className="flex-1">{/* placeholder */}</main>
+      <main className="flex-1">
 
       {/* Hero Section */}
       <section className="relative py-12 sm:py-16 bg-gradient-to-b from-background to-secondary/30">
