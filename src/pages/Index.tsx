@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import SEO from "@/components/SEO";
-import logoAsset from "@/assets/logo.jpg.asset.json";
+import logoAsset from "@/assets/logo-transparent.png";
 import { useLanguage } from "@/lib/i18n";
 
 const Index = () => {
@@ -57,7 +57,7 @@ const Index = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <img
-                src={logoAsset.url}
+                src={logoAsset}
                 alt={t("brand.name")}
                 className="w-48 sm:w-56 lg:w-64 mx-auto mb-8 opacity-100"
               />
