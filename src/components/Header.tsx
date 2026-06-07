@@ -23,14 +23,9 @@ const Header = () => {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl font-serif font-bold text-primary tracking-tight">
-                {t("brand.name")}
-              </span>
-              <span className="text-xs sm:text-sm text-muted-foreground tracking-wider uppercase">
-                {t("brand.tagline")}
-              </span>
-            </div>
+            <span className="text-xl sm:text-2xl font-serif font-bold text-primary tracking-tight">
+              {t("brand.name")}
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
