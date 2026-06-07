@@ -10,12 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Description */}
           <div className="space-y-4">
-            <div className="flex flex-col">
-              <span className="text-xl font-serif font-bold tracking-tight">{t("brand.name")}</span>
-              <span className="text-sm text-primary-foreground/80 tracking-wider uppercase">
-                {t("brand.tagline")}
-              </span>
-            </div>
+            <span className="text-xl font-serif font-bold tracking-tight">{t("brand.name")}</span>
             <p className="text-sm text-primary-foreground/70">{t("footer.description")}</p>
           </div>
 

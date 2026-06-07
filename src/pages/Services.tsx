@@ -9,7 +9,6 @@ import {
   AppWindow,
   Palette,
   Sparkles,
-  Search,
   LifeBuoy,
 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
@@ -24,11 +23,10 @@ const Services = () => {
     { icon: AppWindow, title: t("services.s.webapp.title"), description: t("services.s.webapp.desc") },
     { icon: Palette, title: t("services.s.design.title"), description: t("services.s.design.desc") },
     { icon: Sparkles, title: t("services.s.brand.title"), description: t("services.s.brand.desc") },
-    { icon: Search, title: t("services.s.seo.title"), description: t("services.s.seo.desc") },
     { icon: LifeBuoy, title: t("services.s.support.title"), description: t("services.s.support.desc") },
   ];
 
-  const also = Array.from({ length: 12 }, (_, i) => t(`services.also.li.${i + 1}`));
+  const also = Array.from({ length: 5 }, (_, i) => t(`services.also.li.${i + 1}`));
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -53,7 +51,7 @@ const Services = () => {
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-primary mb-12 text-center">
               {t("services.grid.title")}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 [&>*:last-child]:md:col-span-2 [&>*:last-child]:md:max-w-md [&>*:last-child]:md:mx-auto [&>*:last-child]:md:w-full [&>*:last-child]:lg:col-span-1 [&>*:last-child]:lg:col-start-2 [&>*:last-child]:lg:max-w-none">
               {services.map((service, index) => (
                 <ServiceCard
                   key={index}
