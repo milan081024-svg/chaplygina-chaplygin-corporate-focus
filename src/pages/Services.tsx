@@ -51,7 +51,7 @@ const Services = () => {
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-primary mb-12 text-center">
               {t("services.grid.title")}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 [&>*:last-child]:md:col-span-2 [&>*:last-child]:md:max-w-md [&>*:last-child]:md:mx-auto [&>*:last-child]:md:w-full [&>*:last-child]:lg:col-span-1 [&>*:last-child]:lg:col-start-2 [&>*:last-child]:lg:max-w-none">
               {services.map((service, index) => (
                 <ServiceCard
                   key={index}
