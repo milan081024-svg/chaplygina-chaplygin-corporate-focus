@@ -90,9 +90,11 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <img 
-              src={logo} 
+              src={logoTransparent.url} 
               alt="Chaplygina & Chaplygin Corporate Consulting" 
               className="w-48 sm:w-56 lg:w-64 mx-auto mb-8 opacity-100"
+              width={1024}
+              height={1024}
             />
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-primary mb-6 text-balance">
               Корпоративный юридический консалтинг для бизнеса
