@@ -30,7 +30,7 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: "Chaplygina & Chaplygin",
   url: "https://chplgn.lovable.app",
-  logo: "https://chplgn.lovable.app/favicon.ico",
+  logo: "https://chplgn.lovable.app/favicon.png",
 };
 
 const Index = () => {
