@@ -92,7 +92,7 @@ const Index = () => {
             <img 
               src={logoTransparent} 
               alt="Chaplygina & Chaplygin Corporate Consulting" 
-              className="w-56 sm:w-64 lg:w-72 mx-auto mb-8 opacity-100"
+              className="w-64 sm:w-72 lg:w-80 mx-auto mb-4 opacity-100"
               width={1024}
               height={1024}
             />
