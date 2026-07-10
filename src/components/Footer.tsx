@@ -7,13 +7,12 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="space-y-4">
             <div className="flex flex-col">
-              <img
-                src={logoTransparent}
-                alt="Chaplygina & Chaplygin"
-                className="h-14 w-auto object-contain"
-                width={1024}
-                height={1024}
-              />
+              <span className="text-xl font-serif font-bold tracking-tight">
+                Chaplygina & Chaplygin
+              </span>
+              <span className="text-sm text-primary-foreground/80 tracking-wider uppercase">
+                Corporate Consulting
+              </span>
             </div>
             <p className="text-sm text-primary-foreground/70">Профессиональный корпоративный юридический консалтинг для вашего бизнеса.</p>
           </div>
