@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import SEO from "@/components/SEO";
-import logo from "@/assets/logo.jpg";
+import logoTransparent from "@/assets/logo-transparent.png.asset.json";
 
 const legalServiceJsonLd = {
   "@context": "https://schema.org",
