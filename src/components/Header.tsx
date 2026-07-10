@@ -20,15 +20,14 @@ const Header = () => {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl font-serif font-bold text-primary tracking-tight">
-                Chaplygina & Chaplygin
-              </span>
-              <span className="text-xs sm:text-sm text-muted-foreground tracking-wider uppercase">
-                Corporate Consulting
-              </span>
-            </div>
+          <Link to="/" className="flex items-center space-x-3 group" aria-label="Chaplygina & Chaplygin Corporate Consulting">
+            <img
+              src={logoTransparent}
+              alt="Chaplygina & Chaplygin"
+              className="h-12 sm:h-14 w-auto object-contain"
+              width={1024}
+              height={1024}
+            />
           </Link>
 
           {/* Desktop Navigation */}
